@@ -1,0 +1,142 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-butons slot="start">
+          <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
+      </ion-butons>
+
+      <ion-grid>
+          <ion-row>
+              <ion-col size="8">
+                  <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
+              </ion-col>
+              <ion-col size="1">
+                  <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Menu -->
+
+<ion-split-menu>
+  <ion-menu contentId="content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item tappable routerLink="/perfil" routerDirection="root">
+          <ion-icon name="person" slot="start"></ion-icon>
+          Perfil
+        </ion-item>
+        <ion-item tappable routerLink="/config" routerDirection="root">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          Configuraciones
+        </ion-item>
+        <ion-item tappable routerLink="/notificaciones" routerDirection="root">
+          <ion-icon name="notifications" slot="start"></ion-icon>
+          Notificaciones
+        </ion-item>
+        <ion-item tappable routerLink="/ayuda" routerDirection="root">
+          <ion-icon name="help-buoy-outline" slot="start"></ion-icon>
+          Ayuda
+        </ion-item>
+        <ion-item tappable routerLink="/selogin" routerDirection="root">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          Cerrar Sesion
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-menu>
+    
+    <ion-content class="fondo">
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="5">
+                <ion-icon name="newspaper-outline" style="zoom:7.0"></ion-icon>
+        </ion-col>
+        <ion-col style="text-align: right;">
+          <h1>Novedades</h1>   
+        </ion-col>
+        <ion-col>
+          <h2>¡No te pierdas de las ultimas novedades en tu sede!</h2> 
+        </ion-col>
+        <ion-slides>
+            <ion-slide>
+                <ion-img src="assets/media/1.jfif"></ion-img>
+            </ion-slide>
+            <ion-slide>
+                <ion-img src="assets/media/2.jfif"></ion-img>
+            </ion-slide>
+            <ion-slide>
+                <ion-img src="assets/media/3.jfif"></ion-img>
+            </ion-slide>
+            <ion-slide>
+                <ion-img src="assets/media/4.jfif"></ion-img>
+            </ion-slide>
+          </ion-slides>
+
+      </ion-row>
+     </ion-grid>
+        </ion-card-content>
+        
+        
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="5">
+                <ion-icon name="newspaper-outline" style="zoom:7.0"></ion-icon>
+              </ion-col>
+              <ion-col style="text-align: right;">
+                <h1 style="text-align: right;">Actualizacion</h1>   
+              </ion-col>
+              <ion-col>
+                <h2 style="text-align: right;">Actualizacion 0.0.2</h2> 
+              </ion-col>
+              <ion-row>
+                <ion-label>
+                  -Se ha agregado un menu desplegable.<br>-Se han vinculado mas secciones.
+                </ion-label>
+              </ion-row>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    
+    </ion-content>
+
+      
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-tabs>
+          <ion-tab-bar slot="bottom">
+            <ion-tab-button href="./inicio">
+              <ion-icon name="map"></ion-icon>
+              <ion-label>Mapa</ion-label>
+            </ion-tab-button>
+          
+            <ion-tab-button href="./recordatorios">
+              <ion-icon name="calendar"></ion-icon>
+              <ion-label>Recordatorios</ion-label>
+            </ion-tab-button>
+              
+            <ion-tab-button href="./novedades">
+              <ion-icon name="newspaper"></ion-icon>
+              <ion-label>Novedades</ion-label>
+            </ion-tab-button>
+          </ion-tab-bar>
+        </ion-tabs>
+      </ion-toolbar>
+    </ion-footer>    
+    

@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-item>
+      <ion-row>
+          <ion-col size="8" class="titulo">
+              <ion-title>
+              Mapa Intercactivo
+              </ion-title>
+          </ion-col>
+          <ion-col size="2">
+              <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+          </ion-col>
+      </ion-row>
+  </ion-item>
+</ion-header>
+<ion-content class="fondo">
+  <ion-grid>
+      <ion-card>
+          <br><br>
+          <ion-row>
+              <ion-col>
+                  <div class="centrado">
+                      <h2 id="subitem"><b>Inicio de Sesion:</b></h2>
+                  </div>
+              </ion-col>
+          </ion-row>
+          <br>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-icon name="person-circle" size="large"></ion-icon>
+                          <ion-label position="floating">Usuario:</ion-label>
+                          <ion-input></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-icon name="keypad" size="large"></ion-icon>
+                          <ion-label position="floating">Contraseña:</ion-label>
+                          <ion-input></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <br>
+          <ion-row>
+              <ion-col>
+                  <ion-row>
+                      <div id="mini">
+                          <ion-label>¿Olvidaste tu contraseña?</ion-label>
+                      </div>
+                  </ion-row>
+                  <ion-row>
+                      <div id="mini">
+                          <a href="./recover">Haz Click Aqui</a>
+                      </div>
+                  </ion-row>
+              </ion-col>
+          </ion-row>
+          <br>
+          <ion-col>
+              <ion-row>
+                  <div expand="block" class="centrado">
+                      <ion-button color="success" href="./inicio">
+                          Acceder
+                      </ion-button>
+                  </div>    
+              </ion-row>
+              <ion-row>
+                  <div expand="block" class="centrado">
+                      <ion-button color="secondary">
+                          Salir
+                      </ion-button>
+                  </div>
+              </ion-row>
+          </ion-col>
+      </ion-card>
+  </ion-grid>
+</ion-content>

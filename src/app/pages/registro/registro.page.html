@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-row>
+          <ion-col size="8" class="titulo">
+              <ion-title>
+              Mapa Intercactivo
+              </ion-title>
+          </ion-col>
+          <ion-col size="2">
+              <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+          </ion-col>
+      </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content 
+  class="fondo"
+  [scrollEvents]="true"
+(ionScrollStart)="logScrollStart()"
+(ionScroll)="logScrolling($event)"
+(ionScrollEnd)="logScrollEnd()">
+  <ion-grid>
+      <ion-card>
+          <ion-row>
+              <ion-col>
+                  <div class="centrado">
+                      <h2 id="subitem"><b>Registro:</b></h2>
+                  </div>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-label position="floating">Nombre:</ion-label>
+                          <ion-input type="text"></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-label position="floating">Apellido:</ion-label>
+                          <ion-input type="text"></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-label position="floating">Nombre de usuario:</ion-label>
+                          <ion-input type="text"></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-label position="floating">Contraseña:</ion-label>
+                          <ion-input type="password"></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-label position="floating">Confirmar Contraseña:</ion-label>
+                          <ion-input type="password"></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                  <ion-item>
+                      <div id="subitem">
+                          <ion-label position="floating">Correo Electronico:</ion-label>
+                          <ion-input></ion-input>
+                      </div>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+          <br><br>
+          <ion-row>
+              <div expand="block" class="centrado">
+                  <ion-button color="success" href="">Registrarse</ion-button>
+              </div>
+          </ion-row>
+          <ion-row>
+              <div expand="block" class="centrado">
+                  <ion-button color="secondary">
+                      Salir
+                  </ion-button>
+              </div>
+          </ion-row>
+          <br><br>
+      </ion-card>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  
+</ion-footer>

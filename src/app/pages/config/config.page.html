@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+
+          <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
+
+
+      <ion-grid>
+          <ion-row>
+              <ion-col size="7">
+                  <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
+              </ion-col>
+              <ion-col size="1">
+                  <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-split-menu>
+  <ion-menu contentId="content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item tappable routerLink="/perfil" routerDirection="root">
+          <ion-icon name="person" slot="start"></ion-icon>
+          Perfil
+        </ion-item>
+        <ion-item tappable routerLink="/config" routerDirection="root">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          Configuraciones
+        </ion-item>
+        <ion-item tappable routerLink="/notificaciones" routerDirection="root">
+          <ion-icon name="notifications" slot="start"></ion-icon>
+          Notificaciones
+        </ion-item>
+        <ion-item tappable routerLink="/ayuda" routerDirection="root">
+          <ion-icon name="help-buoy-outline" slot="start"></ion-icon>
+          Ayuda
+        </ion-item>
+        <ion-item tappable routerLink="/selogin" routerDirection="root">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          Cerrar Sesion
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-menu>
+
+<ion-content>
+  <ion-text color="dark">
+    <h5>Configuraciones</h5>
+  </ion-text>
+  <ion-list>
+    <ion-item>
+      <ion-label>Utilizar fecha por red</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+  
+    <ion-item style="height: 1000px;">
+      <ion-label>Añadir Color</ion-label>
+      <ion-toggle [(ngModel)]="sausage"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Brillo Automatico</ion-label>
+      <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button href="./inicio">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>Mapa</ion-label>
+        </ion-tab-button>
+      
+        <ion-tab-button href="./recordatorio">
+          <ion-icon name="calendar"></ion-icon>
+          <ion-label>Recordatorios</ion-label>
+        </ion-tab-button>
+          
+        <ion-tab-button href="./novedades">
+          <ion-icon name="newspaper"></ion-icon>
+          <ion-label>Novedades</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>  

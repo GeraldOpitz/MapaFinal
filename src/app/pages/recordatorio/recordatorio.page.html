@@ -1,0 +1,157 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-butons slot="start">
+          <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
+      </ion-butons>
+
+      <ion-grid>
+          <ion-row>
+              <ion-col size="8">
+                  <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
+              </ion-col>
+              <ion-col size="1">
+                  <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-split-menu>
+  <ion-menu contentId="content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item tappable routerLink="/perfil" routerDirection="root">
+          <ion-icon name="person" slot="start"></ion-icon>
+          Perfil
+        </ion-item>
+        <ion-item tappable routerLink="/config" routerDirection="root">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          Configuraciones
+        </ion-item>
+        <ion-item tappable routerLink="/notificaciones" routerDirection="root">
+          <ion-icon name="notifications" slot="start"></ion-icon>
+          Notificaciones
+        </ion-item>
+        <ion-item tappable routerLink="/ayuda" routerDirection="root">
+          <ion-icon name="help-buoy-outline" slot="start"></ion-icon>
+          Ayuda
+        </ion-item>
+        <ion-item tappable routerLink="/selogin" routerDirection="root">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          Cerrar Sesion
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-menu>
+
+
+<ion-content class="fondo">
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+      <ion-icon name="calendar-outline" style="zoom:7.0"></ion-icon>  
+    </ion-col>
+    <ion-col class="ion-align-self-center">
+      <h1>Crear Recordatorio</h1>   
+    </ion-col>
+    <ion-col>
+      <h2>Escribir recordatorio:</h2>
+      <ion-item>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+      <br>
+      <h1>Fecha:</h1>  
+
+      <ion-list>
+    
+        <ion-item>
+          <ion-select placeholder="Elige un día">
+            <ion-select-option value="l">Lunes</ion-select-option>
+            <ion-select-option value="m">Martes</ion-select-option>
+            <ion-select-option value="mm">Miercoles</ion-select-option>
+            <ion-select-option value="j">Jueves</ion-select-option>
+            <ion-select-option value="v">Viernes</ion-select-option>
+            <ion-select-option value="s">Sabado</ion-select-option>
+            <ion-select-option value="d">Domingo</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Hora</ion-label>
+          <ion-datetime displayFormat="HH:mm"></ion-datetime>
+        </ion-item>
+      
+      </ion-list>
+
+      <ion-button expand="block">Guardar recordatorio</ion-button>
+        
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+    </ion-card-content>
+
+    
+    
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+      <ion-icon name="calendar-outline" style="zoom:7.0"></ion-icon>  
+    </ion-col>
+    <ion-col class="ion-align-self-center">
+      <h1>Borrar Existente</h1>   
+    </ion-col>
+    <ion-col>
+      <h1>Borrar:</h1>
+    
+<ion-button color="primary" expand="full" (click)="showConfirm()">Recordatorio 1</ion-button>
+<ion-button color="primary" expand="full" (click)="showConfirm()">Recordatorio 2</ion-button>
+<ion-button color="primary" expand="full" (click)="showConfirm()">Recordatorio 3</ion-button>
+<ion-button color="primary" expand="full" (click)="showConfirm()">Recordatorio 4</ion-button>
+<ion-button color="primary" expand="full" (click)="showConfirm()">Recordatorio 5</ion-button>
+        
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+    </ion-card-content>
+    
+    
+  </ion-card>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button href="./inicio">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>Mapa</ion-label>
+        </ion-tab-button>
+      
+        <ion-tab-button href="./recordatorio">
+          <ion-icon name="calendar"></ion-icon>
+          <ion-label>Recordatorios</ion-label>
+        </ion-tab-button>
+          
+        <ion-tab-button href="./novedades">
+          <ion-icon name="newspaper"></ion-icon>
+          <ion-label>Novedades</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>    

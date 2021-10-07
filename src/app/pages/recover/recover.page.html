@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-row>
+          <ion-col size="8" class="titulo">
+              <ion-title>
+              Mapa Intercactivo
+              </ion-title>
+          </ion-col>
+          <ion-col size="2">
+              <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+          </ion-col>
+      </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content 
+  class="fondo"
+  [scrollEvents]="true"
+(ionScrollStart)="logScrollStart()"
+(ionScroll)="logScrolling($event)"
+(ionScrollEnd)="logScrollEnd()">
+  <ion-grid>
+      <ion-card>
+          <ion-row>
+              <ion-col>
+                  <div class="centrado">
+                      <h2 id="subitem"><b>Recuperacion:</b></h2>
+                  </div>
+              </ion-col>
+          </ion-row> 
+          <ion-row>
+              <ion-label style="font-size: medium;" class="centrado">Ingrese el correo vinculado a su cuenta:</ion-label>
+          </ion-row>
+          <ion-row>
+              <ion-item class="centrado">  
+                  <ion-input type="email"></ion-input>
+              </ion-item> 
+          </ion-row>
+          <br>
+          <ion-row>
+              <ion-label class="centrado">
+                  (Se enviara un link a la cuenta del propietario para realizar el formulario correspondiente)
+              </ion-label>
+          </ion-row>
+          <br><br> 
+          <ion-row>
+              <div expand="block" class="centrado">
+                  <ion-button color="success" href="./login">
+                      Confirmar
+                  </ion-button>
+              </div>
+          </ion-row>  
+          <ion-row>
+              <div expand="block" class="centrado">
+                  <ion-button color="secondary">
+                      Salir
+                  </ion-button>
+              </div>
+          </ion-row>
+          <br><br>
+      </ion-card>
+  </ion-grid>
+</ion-content>
