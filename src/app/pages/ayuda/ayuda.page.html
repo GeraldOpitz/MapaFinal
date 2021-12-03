@@ -1,21 +1,22 @@
 <ion-header>
   <ion-toolbar>
-      <ion-butons slot="start">
-          <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
-      </ion-butons>
-
+      <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
       <ion-grid>
           <ion-row>
-              <ion-col size="8">
-                  <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
-              </ion-col>
-              <ion-col size="1">
-                  <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
-              </ion-col>
+            <ion-col size="2">
+              <ion-menu-button></ion-menu-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
+            </ion-col>
+            <ion-col>
+                <ion-img src="assets/media/duoc.png" class="logo" ></ion-img>
+            </ion-col>
           </ion-row>
       </ion-grid>
   </ion-toolbar>
 </ion-header>
+
 <ion-split-menu>
   <ion-menu contentId="content">
     <ion-header>
@@ -64,15 +65,27 @@
         <ion-icon name="help-circle-outline" style="zoom:7.0"></ion-icon>  
       </ion-col>
       <ion-col class="ion-align-self-center">
-        <h1>Ayuda</h1>   
+        <h1 class="centrado">Ayuda</h1>   
       </ion-col>
       <ion-col>
-        <h1>¿Necesitas reportar un problema?</h1> <br>
+        <h2 class="centrado">¿Necesitas reportar un problema?</h2> <br>
         <ion-item>
         <ion-textarea></ion-textarea>
-        </ion-item> <br>
-        <ion-button>Enviar</ion-button> <br> <br> <br> <br>
-        <ion-button>Ayuda sobre privacidad y <br> seguridad</ion-button>
+        </ion-item>
+        <ion-col>
+          <ion-button>Enviar</ion-button>
+        </ion-col>
+        <br><br>
+        <ion-row>
+          <ion-col>
+            <h2>¿Necesitas contactar al soporte?</h2>
+          </ion-col>
+          <ion-col>
+            <h3>Numero telefonico: +569 0122 8367</h3>
+
+            <h3>Correo Electronico: soportemapa@gmail.cl</h3>
+          </ion-col>
+        </ion-row>
        
       </ion-col>
     </ion-row>

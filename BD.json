@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "nombre": "a",
+      "apellido": "a",
+      "password": "a",
+      "correo": "a",
+      "id": 1
+    },
+    {
+      "nombre": "Jorge",
+      "apellido": "Pederneras",
+      "password": "1234567890",
+      "correo": "Jo@gmail.com",
+      "id": 2
+    },
+    {
+      "nombre": "Jorge",
+      "apellido": "Palomeras",
+      "password": "12345678",
+      "correo": "jorgepalomeras@hotmail.cl",
+      "id": 3
+    }
+  ]
+}

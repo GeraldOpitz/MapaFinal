@@ -1,17 +1,17 @@
 <ion-header>
   <ion-toolbar>
-
-          <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
-
-
+      <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
       <ion-grid>
           <ion-row>
-              <ion-col size="7">
-                  <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
-              </ion-col>
-              <ion-col size="1">
-                  <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
-              </ion-col>
+            <ion-col size="2">
+              <ion-menu-button></ion-menu-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
+            </ion-col>
+            <ion-col size="1">
+                <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+            </ion-col>
           </ion-row>
       </ion-grid>
   </ion-toolbar>
@@ -53,17 +53,40 @@
   <ion-router-outlet id="content" main></ion-router-outlet>
 </ion-split-menu>
 
+
 <ion-content class="fondo">  
   <ion-row class="ajustar">
-    <ion-card>
-      <ion-slides>
-        <ion-slide>
-          <ion-img src="assets/media/piso1.jpg"></ion-img>
-        </ion-slide>
-        <ion-slide>
-          <ion-img src="assets/media/piso2.jpg"></ion-img>
-        </ion-slide>
-      </ion-slides>
+    <ion-card class="llenar">
+      <ion-card-header>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-slides>
+          <ion-slide>
+            <ion-img #title1 src="assets/media/Boceto-2.jpg" class="llenar"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img #title2 src="assets/media/Boceto-1.jpg" class="llenar"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/media/Boceto1.jpg" class="llenar"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/media/Boceto2.jpg" class="llenar"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/media/Boceto3.jpg" class="llenar"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/media/Boceto4.jpg" class="llenar"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/media/Boceto5.jpg" class="llenar"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="assets/media/Boceto6.jpg" class="llenar"></ion-img>
+          </ion-slide>
+        </ion-slides>
+      </ion-card-content>
     </ion-card>
   </ion-row>
 </ion-content>

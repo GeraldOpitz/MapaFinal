@@ -1,17 +1,17 @@
 <ion-header>
   <ion-toolbar>
-
-          <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
-
-
+      <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
       <ion-grid>
           <ion-row>
-              <ion-col size="7">
-                  <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
-              </ion-col>
-              <ion-col size="1">
-                  <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
-              </ion-col>
+            <ion-col size="2">
+              <ion-menu-button></ion-menu-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
+            </ion-col>
+            <ion-col size="1">
+                <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+            </ion-col>
           </ion-row>
       </ion-grid>
   </ion-toolbar>
@@ -54,25 +54,36 @@
 </ion-split-menu>
 
 <ion-content>
-  <ion-text color="dark">
-    <h5>Configuraciones</h5>
-  </ion-text>
-  <ion-list>
+  <ion-item>
+    <ion-icon name="settings"></ion-icon>
+    <ion-label id="pad">Configuraciones</ion-label>
+  </ion-item>
+
     <ion-item>
-      <ion-label>Utilizar fecha por red</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+      <ion-label>Ahorro de bateria</ion-label>
+      <ion-toggle></ion-toggle>
     </ion-item>
-  
-    <ion-item style="height: 1000px;">
-      <ion-label>Añadir Color</ion-label>
-      <ion-toggle [(ngModel)]="sausage"></ion-toggle>
-    </ion-item>
-  
+
     <ion-item>
-      <ion-label>Brillo Automatico</ion-label>
-      <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+      <ion-label>Solo con datos moviles</ion-label>
+      <ion-toggle></ion-toggle>
     </ion-item>
-  </ion-list>
+
+
+    <ion-item> 
+      <ion-label>Baja resolucion</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <ion-item > 
+      <ion-label>Tamaño de texto</ion-label>
+    </ion-item>
+
+    <ion-range min="20" max="80" step="2">
+      <ion-icon size="small" name="pencil-outline" slot="start"></ion-icon>
+      <ion-icon slot="end" name="pencil"></ion-icon>
+    </ion-range>
+
 </ion-content>
 
 <ion-footer>

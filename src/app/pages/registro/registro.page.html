@@ -18,91 +18,75 @@
 (ionScrollStart)="logScrollStart()"
 (ionScroll)="logScrolling($event)"
 (ionScrollEnd)="logScrollEnd()">
-  <ion-grid>
-      <ion-card>
-          <ion-row>
-              <ion-col>
-                  <div class="centrado">
-                      <h2 id="subitem"><b>Registro:</b></h2>
-                  </div>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col>
-                  <ion-item>
-                      <div id="subitem">
-                          <ion-label position="floating">Nombre:</ion-label>
-                          <ion-input type="text"></ion-input>
-                      </div>
-                  </ion-item>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col>
-                  <ion-item>
-                      <div id="subitem">
-                          <ion-label position="floating">Apellido:</ion-label>
-                          <ion-input type="text"></ion-input>
-                      </div>
-                  </ion-item>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col>
-                  <ion-item>
-                      <div id="subitem">
-                          <ion-label position="floating">Nombre de usuario:</ion-label>
-                          <ion-input type="text"></ion-input>
-                      </div>
-                  </ion-item>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col>
-                  <ion-item>
-                      <div id="subitem">
-                          <ion-label position="floating">Contraseña:</ion-label>
-                          <ion-input type="password"></ion-input>
-                      </div>
-                  </ion-item>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col>
-                  <ion-item>
-                      <div id="subitem">
-                          <ion-label position="floating">Confirmar Contraseña:</ion-label>
-                          <ion-input type="password"></ion-input>
-                      </div>
-                  </ion-item>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col>
-                  <ion-item>
-                      <div id="subitem">
-                          <ion-label position="floating">Correo Electronico:</ion-label>
-                          <ion-input></ion-input>
-                      </div>
-                  </ion-item>
-              </ion-col>
-          </ion-row>
-          <br><br>
-          <ion-row>
-              <div expand="block" class="centrado">
-                  <ion-button color="success" href="">Registrarse</ion-button>
-              </div>
-          </ion-row>
-          <ion-row>
-              <div expand="block" class="centrado">
-                  <ion-button color="secondary">
-                      Salir
-                  </ion-button>
-              </div>
-          </ion-row>
-          <br><br>
-      </ion-card>
-  </ion-grid>
+    <ion-grid>
+        <ion-card>
+            <ion-card-header>
+                <ion-row>
+                    <ion-col>
+                        <div class="centrado">
+                            <h2 id="subitem"><b>Registro:</b></h2>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <div id="subitem">
+                                <ion-label position="floating">Nombre:</ion-label>
+                                <ion-input [(ngModel)]="usuario.nombre" type="text"></ion-input>
+                            </div>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <div id="subitem">
+                                <ion-label position="floating">Apellido:</ion-label>
+                                <ion-input [(ngModel)]="usuario.apellido" type="text"></ion-input>
+                            </div>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <div id="subitem">
+                                <ion-label position="floating">Contraseña:</ion-label>
+                                <ion-input [(ngModel)]="usuario.password" type="password"></ion-input>
+                            </div>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <div id="subitem">
+                                <ion-label position="floating">Correo Electronico:</ion-label>
+                                <ion-input [(ngModel)]="usuario.correo" type="email"></ion-input>
+                            </div>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <br><br>
+                <ion-row>
+                    <div expand="block" class="centrado">
+                        <ion-button (click)="agregarUsuario()" color="success" href=''>Registrarse</ion-button>
+                    </div>
+                </ion-row>
+                <ion-row>
+                    <div expand="block" class="centrado">
+                        <ion-button color="secondary">
+                            Salir
+                        </ion-button>
+                    </div>
+                </ion-row>
+                <br><br>
+            </ion-card-content>
+        </ion-card>
+    </ion-grid>
 </ion-content>
 
 <ion-footer>

@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
-
 import { InicioPageRoutingModule } from './inicio-routing.module';
-
 import { InicioPage } from './inicio.page';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -15,7 +13,8 @@ import { InicioPage } from './inicio.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule
+    InicioPageRoutingModule,
+    SwiperModule
   ],
   declarations: [InicioPage]
 })

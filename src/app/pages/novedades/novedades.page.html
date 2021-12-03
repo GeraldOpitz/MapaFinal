@@ -1,17 +1,17 @@
 <ion-header>
   <ion-toolbar>
-      <ion-butons slot="start">
-          <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
-      </ion-butons>
-
+      <ion-menu-button  color="tertiary" menu="first"></ion-menu-button>
       <ion-grid>
           <ion-row>
-              <ion-col size="8">
-                  <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
-              </ion-col>
-              <ion-col size="1">
-                  <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
-              </ion-col>
+            <ion-col size="2">
+              <ion-menu-button></ion-menu-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-searchbar showCancelButton="focus" animated></ion-searchbar>
+            </ion-col>
+            <ion-col size="1">
+                <ion-img src="assets/media/duoc.png" class="logo"></ion-img>
+            </ion-col>
           </ion-row>
       </ion-grid>
   </ion-toolbar>
@@ -55,7 +55,7 @@
   <ion-router-outlet id="content" main></ion-router-outlet>
 </ion-split-menu>
     
-    <ion-content class="fondo">
+    <ion-content>
       <ion-card>
         <ion-card-content>
           <ion-grid>
@@ -69,7 +69,7 @@
         <ion-col>
           <h2>¡No te pierdas de las ultimas novedades en tu sede!</h2> 
         </ion-col>
-        <ion-slides>
+        <ion-slides (ionSlideDidChange)="onSlideChange(ionSlideWillChange)">
             <ion-slide>
                 <ion-img src="assets/media/1.jfif"></ion-img>
             </ion-slide>
@@ -88,7 +88,6 @@
      </ion-grid>
         </ion-card-content>
         
-        
       </ion-card>
       <ion-card>
         <ion-card-content>
@@ -98,10 +97,10 @@
                 <ion-icon name="newspaper-outline" style="zoom:7.0"></ion-icon>
               </ion-col>
               <ion-col style="text-align: right;">
-                <h1 style="text-align: right;">Actualizacion</h1>   
+                <h1 style="text-align: right;">Actualización</h1>   
               </ion-col>
               <ion-col>
-                <h2 style="text-align: right;">Actualizacion 0.0.2</h2> 
+                <h2 style="text-align: right;">Actualización 0.0.2</h2> 
               </ion-col>
               <ion-row>
                 <ion-label>
@@ -126,7 +125,7 @@
               <ion-label>Mapa</ion-label>
             </ion-tab-button>
           
-            <ion-tab-button href="./recordatorios">
+            <ion-tab-button href="./recordatorio">
               <ion-icon name="calendar"></ion-icon>
               <ion-label>Recordatorios</ion-label>
             </ion-tab-button>
@@ -138,5 +137,5 @@
           </ion-tab-bar>
         </ion-tabs>
       </ion-toolbar>
-    </ion-footer>    
+    </ion-footer>       
     
